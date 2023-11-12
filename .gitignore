@@ -1,0 +1,10 @@
+
+db-migrations/liquidbase.properties
+.devops/docker/develop/docker-compose.override.yml
+.devops/docker/develop/data
+.devops/docker/develop/mysql/data
+
+.idea
+*.iws
+*.iml
+*.ipr

@@ -1,0 +1,8 @@
+server.port=<PORT>
+
+spring.datasource.url=jdbc:postgresql://<HOST>:<DB-PORT>/<DATABASE-NAME>
+spring.datasource.username=<USERNAME>
+spring.datasource.password=<PASSWORD>
+
+spring.jpa.hibernate.ddl-auto=update
+

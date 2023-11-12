@@ -1,0 +1,85 @@
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.1.xsd">
+
+    <changeSet id="1699803144" author="JeysonAmado">
+        <!-- Inserting document_types -->
+        <insert tableName="document_types">
+            <column name="id" valueNumeric="1"/>
+            <column name="name" value="CC"/>
+        </insert>
+
+        <insert tableName="document_types">
+            <column name="id" valueNumeric="2"/>
+            <column name="name" value="TI"/>
+        </insert>
+
+        <insert tableName="document_types">
+            <column name="id" valueNumeric="3"/>
+            <column name="name" value="CE"/>
+        </insert>
+
+        <insert tableName="document_types">
+            <column name="id" valueNumeric="4"/>
+            <column name="name" value="Pasaporte"/>
+        </insert>
+
+        <insert tableName="document_types">
+            <column name="id" valueNumeric="5"/>
+            <column name="name" value="NIT"/>
+        </insert>
+
+        <insert tableName="document_types">
+            <column name="id" valueNumeric="6"/>
+            <column name="name" value="RUC"/>
+        </insert>
+
+        <!-- Inserting users -->
+        <insert tableName="users">
+            <column name="id" valueNumeric="1"/>
+            <column name="name" value="Jeyson"/>
+            <column name="last_name" value="Amado"/>
+            <column name="age" valueNumeric="25"/>
+            <column name="document_type_id" valueNumeric="1"/>
+            <column name="document_number" value="1057604823"/>
+            <column name="password" value="$2a$10$b2Obj.AOWiqBuqn7sd2i..hCqpfBLkNi47zTCg6E.qqlv4rLBbg0C"/>
+            <column name="email" value="jeyson@admin.net"/>
+        </insert>
+
+        <insert tableName="users">
+            <column name="id" valueNumeric="2"/>
+            <column name="name" value="Ejemplo"/>
+            <column name="last_name" value="Comprador"/>
+            <column name="age" valueNumeric="57"/>
+            <column name="document_type_id" valueNumeric="5"/>
+            <column name="document_number" value="81224545-1"/>
+            <column name="password" value="$2a$10$E8oeW2vW/xSxysSlnwZ/tO5XsFTkjP657H4.l4thymStM.H4nuPeK"/>
+            <column name="email" value="jeyson@customer.net"/>
+        </insert>
+
+        <!-- Inserting roles -->
+        <insert tableName="roles">
+            <column name="id" valueNumeric="1"/>
+            <column name="name" value="ADMINISTRADOR"/>
+        </insert>
+        <insert tableName="roles">
+            <column name="id" valueNumeric="2"/>
+            <column name="name" value="COMPRADOR"/>
+        </insert>
+        <!-- Inserting user_roles -->
+        <insert tableName="user_roles">
+            <column name="id" valueNumeric="1"/>
+            <column name="user_id" valueNumeric="1"/>
+            <column name="role_id" valueNumeric="1"/>
+        </insert>
+        <insert tableName="user_roles">
+            <column name="id" valueNumeric="2"/>
+            <column name="user_id" valueNumeric="2"/>
+            <column name="role_id" valueNumeric="2"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>
