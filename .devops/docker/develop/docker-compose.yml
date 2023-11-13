@@ -1,17 +1,6 @@
 version: "3.9"
 
 services:
-#  medicalert:
-#    build:
-#      context: ../../../Medicalert
-#      dockerfile: ../.devops/docker/develop/Dockerfile
-#    volumes:
-#      - ./data:/Medicalert/data
-#    networks:
-#      - java-medicalert
-#    depends_on:
-#      - db-postgres
-
   db-postgres:
     image: postgres:13
     container_name: pixasearch-postgres

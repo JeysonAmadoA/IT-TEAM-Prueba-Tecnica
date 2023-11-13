@@ -3,11 +3,6 @@ version: "3.9"
 #Puerto_maquina:puerto_contenedor
 services:
 
-  baseproject:
+  db-postgres:
     ports:
-      - "8090:8090"
-
-
-  db-mysql:
-    ports:
-      - "9723:3306"
+      - "5432:5432"
