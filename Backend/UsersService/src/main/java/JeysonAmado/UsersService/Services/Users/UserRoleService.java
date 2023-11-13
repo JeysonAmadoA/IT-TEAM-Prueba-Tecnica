@@ -1,4 +1,4 @@
-package JeysonAmado.UsersService.Services;
+package JeysonAmado.UsersService.Services.Users;
 
 import JeysonAmado.UsersService.Entities.Users.UserRoleEntity;
 import JeysonAmado.UsersService.Interfaces.Services.UserRoleServiceInterface;

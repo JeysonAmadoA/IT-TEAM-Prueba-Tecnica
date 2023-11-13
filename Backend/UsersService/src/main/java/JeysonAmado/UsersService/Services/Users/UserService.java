@@ -1,4 +1,4 @@
-package JeysonAmado.UsersService.Services;
+package JeysonAmado.UsersService.Services.Users;
 
 import JeysonAmado.UsersService.Dto.Auth.RegisterDto;
 import JeysonAmado.UsersService.Dto.User.UserDto;

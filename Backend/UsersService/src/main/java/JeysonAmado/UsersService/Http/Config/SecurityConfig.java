@@ -28,13 +28,14 @@ public class SecurityConfig {
                 .cors().and()
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
                 .authorizeHttpRequests()
+                .requestMatchers("/users/update").permitAll()
                 .requestMatchers("/auth/**").permitAll()
                 .requestMatchers("/auth/register").permitAll()
-                .requestMatchers("/users/**").hasRole("ADMIN")
                 .anyRequest()
                 .authenticated()
                 .and()
                 .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class);
+
         return http.build();
 
     }

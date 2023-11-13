@@ -37,9 +37,11 @@ public class AuthController {
     private UserRoleServiceInterface userRoleService;
 
     @Autowired
-    public AuthController(AuthenticationManager authenticationManager, JWTUtilities jwtUtilities) {
+    public AuthController(AuthenticationManager authenticationManager, JWTUtilities jwtUtilities, UserServiceInterface userService, UserRoleServiceInterface userRoleService) {
         this.authenticationManager = authenticationManager;
         this.jwtUtilities = jwtUtilities;
+        this.userService = userService;
+        this.userRoleService = userRoleService;
     }
 
     @PostMapping("/login")
@@ -63,8 +65,8 @@ public class AuthController {
     public ResponseEntity<String> register(@RequestBody RegisterDto registerDto){
         if (registerDto.getPassword().equals(registerDto.getConfirmPassword())){
             try {
-                UserEntity user = userService.registerUser(registerDto);
-                userRoleService.createUserRole(user.getId(),CUSTOMER_ID);
+                UserEntity user = this.userService.registerUser(registerDto);
+                this.userRoleService.createUserRole(user.getId(),CUSTOMER_ID);
                 return ResponseEntity.status(HttpStatus.CREATED).body("Usuario Registrado");
             }catch (Exception e) {
                 return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Error al registrar usuario: " + e.getMessage());
