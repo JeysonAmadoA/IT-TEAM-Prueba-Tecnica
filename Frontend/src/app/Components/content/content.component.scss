@@ -1,0 +1,36 @@
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px; 
+    margin: 4rem 0 4rem 3rem;
+
+  }
+  
+  .card {
+    width: 100%; 
+  }
+
+
+  
+  .image-container {
+    text-align: center; /* Para centrar el contenido horizontalmente */
+  }
+  
+  .centered-image {
+    display: block; /* Asegura que la imagen no comparta línea con los spans */
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+  }
+  
+  .image-info {
+    display: block; /* Asegura que cada span esté en una línea separada */
+    margin-top: 10px; /* Espacio entre la imagen y los spans */
+  }
+  
+  .loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh; /* Establece la altura al 100% del viewport height */
+  }
+  

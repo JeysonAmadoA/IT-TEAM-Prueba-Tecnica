@@ -1,0 +1,16 @@
+<img [src]="pixabayImage.webformatURL" class="card-img-top" alt="..." style="height: 150px; object-fit: cover;">
+      <div class="card-body">
+        <p class="card-text">
+          <i class="fa fa-eye" aria-hidden="true"></i>
+          <strong> Vistas:</strong> {{ pixabayImage.views }}
+        </p>
+        <p class="card-text">
+          <i class="fa fa-arrow-circle-o-down" aria-hidden="true"></i>
+          <strong> Descargas:</strong> {{ pixabayImage.downloads }}
+        </p>
+        <p class="card-text">
+          <i class="fa fa-comments" aria-hidden="true"></i>
+          <strong> Comentarios:</strong> {{ pixabayImage.user_id }}
+        </p>
+      </div>
+      

@@ -1,0 +1,29 @@
+<div class="loading-container" *ngIf="(pixabayStateService.pixabayImages$ | async)?.length === 0; else imageList">
+  <img src="../../../assets/loading.svg" alt="">
+</div>
+
+<ng-template #imageList>
+  <div class="grid-container">
+    <div *ngFor="let pixabayImage of pixabayStateService.pixabayImages$ | async" class="card" style="width: 15rem;" (click)="openModal(modal)">
+      <app-image [pixabayImage]="pixabayImage"></app-image>
+      <ng-template #modal>
+        <div class="modal-header">
+          <h4 class="modal-title">Imagen - ID : {{ pixabayImage.id }}</h4>
+        </div>
+        <div class="modal-body">
+          <div class="image-container">
+            <img [src]="pixabayImage.previewURL" class="centered-image">
+            <span class="image-info">
+              <i class="fa fa-tags" aria-hidden="true"></i>
+              <strong> Tags:</strong> {{ pixabayImage.tags }}
+            </span>
+            <span class="image-info">
+              <i class="fa fa-heart" aria-hidden="true"></i>
+              <strong> Likes:</strong> {{ pixabayImage.likes }}
+            </span>
+          </div>
+        </div>
+    </ng-template>
+    </div>
+  </div>
+</ng-template>

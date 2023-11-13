@@ -1,0 +1,5 @@
+<div class="d-flex" role="search">
+    <input class="form-control me-2" [(ngModel)]="inputSearch" type="search" maxlength="100"
+     placeholder="Buscar imagen" aria-label="Search" (keyup.enter)="searchImages()">
+    <button class="btn btn-outline-dark" (click)="searchImages()">Buscar</button>
+</div>
