@@ -1,4 +1,4 @@
-# IT-TEAM-Prueba-Tecnica
+# Pixasearch
 
 ## Frontend - Pixasearch
 
